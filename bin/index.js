@@ -7,6 +7,10 @@
  *
  */
 
- const commander = require('commander')
+const path = require('path')
+const fse = require('fs-extra')
+const commander = require('commander')
 
- console.log(process.env)
+const cacheDir = path.join(process.env.HOME, '.yio/yio-core-module')
+
+console.log(cacheDir)
