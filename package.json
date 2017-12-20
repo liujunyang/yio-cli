@@ -1,0 +1,25 @@
+{
+  "name": "yio-cli",
+  "version": "1.0.0",
+  "description": "",
+  "bin": {
+    "yio": "./bin/index.js"
+  },
+  "dependencies": {
+    "commander": "^2.12.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liujunyang/yio-cli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liujunyang/yio-cli/issues"
+  },
+  "homepage": "https://github.com/liujunyang/yio-cli#readme"
+}
