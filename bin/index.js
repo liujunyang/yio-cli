@@ -9,4 +9,4 @@
 
  const commander = require('commander')
 
- console.log(commander)
+ console.log(process.env)
