@@ -12,14 +12,15 @@ const fse = require('fs-extra')
 const commander = require('commander')
 
 const cacheDir = path.join(process.env.HOME, '.yio/yio-core-module')
+console.log(cacheDir)
 
 require('keep-module-latest')({
 	moduleName: 'yio-core',
 	cwd: cacheDir,
 	registry: 'https://registry.npmjs.org/',
-	beforeInstall: () => {
+	beforeInstall: cwd => {
 		console.log('do beforeInstall')
-		if (fse.existSync(cwd)) {
+		if (fse.pathExistsSync(cwd)) {
 			try {
 				fse.removeSync(cwd)
 			} catch (err) {
