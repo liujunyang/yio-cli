@@ -12,7 +12,6 @@ const fse = require('fs-extra')
 const commander = require('commander')
 
 const cacheDir = path.join(process.env.HOME, '.yio/yio-core-module')
-console.log(cacheDir)
 
 require('keep-module-latest')({
 	moduleName: 'yio-core',
@@ -29,7 +28,7 @@ require('keep-module-latest')({
 		}
 	},
 }).then(modulePath => {
-	console.log(modulePath)
+	require(modulePath)(commander);
 }).catch(err => {
 	console.error(err)
 })
