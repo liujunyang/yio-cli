@@ -13,6 +13,9 @@ const commander = require('commander')
 
 const cacheDir = path.join(process.env.HOME, '.yio/yio-core-module')
 
+// require('yio-core')(commander)
+// return
+
 require('keep-module-latest')({
 	moduleName: 'yio-core',
 	cwd: cacheDir,
@@ -28,7 +31,7 @@ require('keep-module-latest')({
 		}
 	},
 }).then(modulePath => {
-	require(modulePath)(commander);
+	require(modulePath)(commander)
 }).catch(err => {
 	console.error(err)
 })
